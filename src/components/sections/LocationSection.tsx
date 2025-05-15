@@ -16,12 +16,13 @@ export default function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Map */}
           <div className="relative h-[400px] bg-barber-dark rounded-lg border border-barber-gold/20 overflow-hidden">
-            {/* Placeholder for Google Map */}
-            <div className="absolute inset-0 bg-barber-dark/90 flex items-center justify-center">
-              <p className="text-gray-400 text-center px-10">
-                [Google Maps would be embedded here showing 500 N Bell Ave #109, Denton, TX 76209]
-              </p>
-            </div>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.4819891413543!2d-97.14201368481933!3d33.218785580826504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864db6cbe0cf183b%3A0xe5bda8911b06b4d9!2s500%20N%20Bell%20Ave%20%23109%2C%20Denton%2C%20TX%2076209%2C%20USA!5e0!3m2!1sen!2sin!4v1715762458841!5m2!1sen!2sin"
+            />
           </div>
 
           {/* Contact Info */}
@@ -40,7 +41,7 @@ export default function LocationSection() {
                   </p>
                   <Button asChild variant="link" className="px-0 text-barber-gold mt-2">
                     <a
-                      href="https://www.google.com/maps/dir/?api=AIzaSyCxyDDGpZ-pOv6N3RC9K1xVO4U-ir4xAF8"
+                      href="https://maps.app.goo.gl/cV9gn2JKRdKtiLhi6"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center"
