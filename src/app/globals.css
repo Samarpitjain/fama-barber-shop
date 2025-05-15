@@ -1,0 +1,82 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Setting up the base theme colors */
+    --background: 0 0% 12.2%; /* #1f1f1f */
+    --foreground: 42 67% 66%; /* #e8c266 */
+
+    --card: 0 0% 12.2%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12.2%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 42 67% 66%; /* #e8c266 - gold */
+    --primary-foreground: 0 0% 12.2%;
+
+    --secondary: 214 23% 41%; /* #6781a1 - blue */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 23 7% 41%; /* #6e6a64 - gray */
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 42 67% 66%; /* #e8c266 - gold */
+    --accent-foreground: 0 0% 12.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 42 67% 66%;
+    --input: 214 23% 41%;
+    --ring: 42 67% 66%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-barber-dark text-gray-200;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply text-barber-gold font-semibold;
+  }
+}
+
+/* Custom utility classes */
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8 lg:px-16 max-w-7xl;
+  }
+
+  .btn-primary {
+    @apply bg-barber-gold text-barber-dark font-semibold px-6 py-3 rounded transition-all hover:bg-barber-gold/90;
+  }
+
+  .btn-outline {
+    @apply border-2 border-barber-gold text-barber-gold font-semibold px-6 py-3 rounded transition-all hover:bg-barber-gold/10;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-3 text-barber-gold;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl mb-8 text-gray-400;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
