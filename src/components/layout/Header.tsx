@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
   { name: "Home", href: "#home" },
@@ -49,7 +50,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -59,6 +60,7 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
         </nav>
 
         {/* Phone and Book Button */}
@@ -100,13 +102,16 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="pt-4 border-t border-barber-gold/30">
-                  <a
-                    href="tel:+19406129127"
-                    className="flex items-center space-x-2 text-gray-300 hover:text-barber-gold mb-4"
-                  >
-                    <Phone size={18} />
-                    <span>+1 940-612-9127</span>
-                  </a>
+                  <div className="flex items-center justify-between mb-4">
+                    <a
+                      href="tel:+19406129127"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-barber-gold"
+                    >
+                      <Phone size={18} />
+                      <span>+1 940-612-9127</span>
+                    </a>
+                    <ThemeToggle />
+                  </div>
                   <Button className="btn-primary w-full">
                     <Link href="#contact">Book an Appointment</Link>
                   </Button>
